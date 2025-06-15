@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexture Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Nexture</div>
+    <nav id="nav-links">
+      <a href="#">Features</a>
+      <a href="#">FAQs</a>
+      <a href="#">Services</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <p class="subtitle">INTRODUCING A NEW WAY TO WORK</p>
+      <h1 class="main-heading">Book your Home Services<br>at your Doorstep</h1>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="hero-right">
+      <img src="chat-placeholder.png" alt="Chat App UI" class="chat-img">
+      <img src="maid-placeholder.png" alt="Maid Illustration" class="maid-img">
+    </div>
+  </section>
+
+  <section class="features-section">
+  <div class="features-container">
+    <div class="feature-card">
+      <div class="feature-icon"></div>
+      <h3>Customer Satisfaction</h3>
+      <p>We complete 98% of services on time, keeping promises and ensuring satisfaction with reliable delivery.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"></div>
+      <h3>Dedicated Support</h3>
+      <p>Our 24/7 support team assists through chat, phone, and email, always ready to resolve your concerns.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"></div>
+      <h3>Quality control</h3>
+      <p>Consistent quality is ensured through regular partner reviews, helping us earn excellent ratings and customer satisfaction</p>
+    </div>
+  </div>
+
+  <div class="grid-placeholder">
+    <p>A grid image showing images of services providec by our company</p>
+  </div>
+</section>
+
+
+
+<section class="whatsapp-section">
+  <div class="whatsapp-container">
+
+    <!-- Left: Square Box -->
+    <div class="chat-phone">
+      <p>Image of phone screen on<br>WhatsApp showing our<br>chats with customers</p>
+    </div>
+
+    <!-- Right: WhatsApp Features -->
+    <div class="whatsapp-features">
+      <h2>Experience the Nexture Difference:<br>Seamless WhatsApp Booking</h2>
+
+      <div class="feature-item">
+        <span class="icon">💬</span>
+        <div>
+          <h4>Instant Connection</h4>
+          <p>Book services directly via WhatsApp in under 60 seconds, connecting you to professionals without delay.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">🛠️</span>
+        <div>
+          <h4>Effortless Process</h4>
+          <p>Simply send a message, describe your needs, and get matched with a qualified service provider instantly.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">🔔</span>
+        <div>
+          <h4>Real-time Updates</h4>
+          <p>Receive instant service confirmations and status alerts directly through your chat, keeping you informed every step of the way.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="icon">🔐</span>
+        <div>
+          <h4>Secure Payments</h4>
+          <p>Handle transactions securely and conveniently within WhatsApp or via a trusted payment link, ensuring peace of mind.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("show-menu");
+    }
+  </script>
+</body>
+</html>

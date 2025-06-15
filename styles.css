@@ -1,0 +1,379 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3e9df;
+  color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 4rem;
+  background-color: #f3e9df;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  max-width: 50%;
+  padding-left: 5rem; /* ⬅️ Right shift for text */
+}
+
+.subtitle {
+  font-size: 1.1rem; /* ⬆️ Slightly increased */
+  letter-spacing: 0.08rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  font-size: 3.5rem; /* ⬆️ Increased text size */
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  font-family: 'Georgia', serif;
+}
+
+.book-btn {
+  background-color: #6b3b28;
+  color: white;
+  font-size: 1.3rem;
+  padding: 0.85rem 2.2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #5a3020;
+}
+
+/* Hero Right */
+.hero-right {
+  position: relative;
+  max-width: 45%;
+  margin-left: -4rem;
+}
+
+/* Chat Image (background) */
+.chat-img {
+  width: 100%;         /* Takes full width of .hero-right */
+  display: block;
+}
+
+/* Maid Image (overlay) */
+.maid-img {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 50%;         /* Now scales with chat-img */
+  height: auto;
+}
+
+
+/* Responsive Navbar & Layout */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    display: none;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  nav.show-menu {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .main-heading {
+    font-size: 2.5rem; /* Smaller for mobile */
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .book-btn {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.75rem;
+  }
+
+  .hero-right {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .chat-img {
+    width: 100%;
+  }
+
+  .maid-img {
+    width: 50%;
+    left: 10%;
+  }
+}
+
+
+
+
+.features-section {
+  background-color: #fef3ec;
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.feature-card {
+  background-color: #fef3ec;
+  border: 0.15rem solid #7a4b40;
+  border-radius: 1rem;
+  flex: 1 1 20rem;
+  max-width: 22rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.feature-icon {
+  background-color: #f99e97;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.grid-placeholder {
+  background-color: #d4d4d4;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 25rem;
+  aspect-ratio: 1 / 1; /* Makes it square */
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.grid-placeholder p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+
+  .grid-placeholder {
+    width: 100%;
+    aspect-ratio: unset; /* Allow natural resizing on mobile */
+    margin: 2rem auto 0 auto;
+  }
+}
+
+
+
+.whatsapp-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Left box: square with aspect ratio */
+.chat-phone {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  background-color: #d4d4d4;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-width: 280px;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Right content: match height by using flex */
+.whatsapp-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  max-width: 600px;
+  min-width: 280px;
+}
+
+.whatsapp-features h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.feature-item .icon {
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: 2px solid #f28d8d;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #f28d8d;
+}
+
+.feature-item h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .whatsapp-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chat-phone,
+  .whatsapp-features {
+    max-width: 100%;
+  }
+
+  .whatsapp-features {
+    margin-top: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .whatsapp-features h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
