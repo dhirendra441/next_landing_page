@@ -15,6 +15,12 @@ body {
   color: #1a1a1a;
 }
 
+main {
+  padding-inline: 1rem;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -55,17 +61,21 @@ nav a {
   justify-content: space-between;
   align-items: center;
   padding: 4rem 4rem;
-  background-color: #f3e9df;
+  background-color: #FFE4D9;
   flex-wrap: wrap;
-}
 
+  /* ✅ Add subtle shadow below */
+  box-shadow: 0 60px 20px rgba(255, 228, 217, 0.6);
+}
 .hero-left {
   max-width: 50%;
-  padding-left: 5rem; /* ⬅️ Right shift for text */
+  padding-left: 5rem;
+  /* ⬅️ Right shift for text */
 }
 
 .subtitle {
-  font-size: 1.1rem; /* ⬆️ Slightly increased */
+  font-size: 1rem;
+  /* ⬆️ Slightly increased */
   letter-spacing: 0.08rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -73,7 +83,8 @@ nav a {
 }
 
 .main-heading {
-  font-size: 3.5rem; /* ⬆️ Increased text size */
+  font-size: 2.5rem;
+  /* ⬆️ Increased text size */
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 2rem;
@@ -83,12 +94,12 @@ nav a {
 .book-btn {
   background-color: #6b3b28;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0.85rem 2.2rem;
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  font-weight: bold;
+  
   transition: background-color 0.3s;
 }
 
@@ -103,19 +114,38 @@ nav a {
   margin-left: -4rem;
 }
 
-/* Chat Image (background) */
-.chat-img {
-  width: 100%;         /* Takes full width of .hero-right */
-  display: block;
+/* Circle glow behind both images */
+.hero-right::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(154, 122, 188, 0.988) 4%, transparent 70%);
+  border-radius: 90%;
+  filter: blur(20px);
+  z-index: 0;
 }
 
-/* Maid Image (overlay) */
+/* Chat Image (background image) */
+.chat-img {
+  width: 30%;
+  display: block;
+  left: 30%;
+  position: relative;
+  z-index: 1; /* Ensure it's above the glowing circle */
+  border-radius: 1rem;
+}
+
+/* Maid Image (foreground image) */
 .maid-img {
   position: absolute;
   bottom: 0;
-  left: 5%;
-  width: 50%;         /* Now scales with chat-img */
+  left: 20%;
+  width: 20%;
   height: auto;
+  z-index: 2; /* Stays above chat image and glow */
 }
 
 
@@ -158,7 +188,8 @@ nav a {
   }
 
   .main-heading {
-    font-size: 2.5rem; /* Smaller for mobile */
+    font-size: 2.5rem;
+    /* Smaller for mobile */
   }
 
   .subtitle {
@@ -177,12 +208,13 @@ nav a {
   }
 
   .chat-img {
-    width: 100%;
+    width: 30%;
+    left: 30%;
   }
 
   .maid-img {
-    width: 50%;
-    left: 10%;
+    width: 20%;
+    left: 20%;
   }
 }
 
@@ -190,7 +222,8 @@ nav a {
 
 
 .features-section {
-  background-color: #fef3ec;
+  background-color: #fef4f000;
+ 
   padding: 4rem 3rem;
   text-align: center;
 }
@@ -231,12 +264,14 @@ nav a {
   font-size: 1rem;
   line-height: 1.6;
 }
+
 .grid-placeholder {
   background-color: #d4d4d4;
   padding: 2rem;
   border-radius: 1rem;
   width: 25rem;
-  aspect-ratio: 1 / 1; /* Makes it square */
+  aspect-ratio: 1 / 1;
+  /* Makes it square */
   margin-left: auto;
   margin-right: 0;
   display: flex;
@@ -273,7 +308,8 @@ nav a {
 
   .grid-placeholder {
     width: 100%;
-    aspect-ratio: unset; /* Allow natural resizing on mobile */
+    aspect-ratio: unset;
+    /* Allow natural resizing on mobile */
     margin: 2rem auto 0 auto;
   }
 }
@@ -282,14 +318,21 @@ nav a {
 
 .whatsapp-container {
   display: flex;
+  background-color: #fff5f1;
   justify-content: space-between;
   align-items: stretch;
-  gap: 3rem;
-  max-width: 1200px;
+  gap: 03rem;
+  max-width: 1700px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-block: 2rem;
+
+  /* ✅ Responsive horizontal padding */
+  padding-inline: clamp(1rem, 10vw, 15rem);
+
   flex-wrap: wrap;
 }
+
+
 
 /* Left box: square with aspect ratio */
 .chat-phone {
@@ -311,7 +354,8 @@ nav a {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
+  /* Center content vertically */
   max-width: 600px;
   min-width: 280px;
 }
@@ -319,6 +363,7 @@ nav a {
 .whatsapp-features h2 {
   font-size: 1.9rem;
   margin-bottom: 1.2rem;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -330,7 +375,7 @@ nav a {
 }
 
 .feature-item .icon {
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #fff;
   border: 2px solid #f28d8d;
   border-radius: 0.5rem;
@@ -340,7 +385,8 @@ nav a {
 
 .feature-item h4 {
   margin: 0 0 0.3rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .feature-item p {
@@ -375,5 +421,254 @@ nav a {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+
+
+
+
+.faq-section {
+  background-color: #fef4f0;
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #000;
+}
+
+.faq-card {
+  background-color: #ffe1cb;
+  border-radius: 1.2rem;
+  margin: 1.5rem auto;
+  max-width: 800px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+  background-color: #fff;
+  padding: 1.2rem;
+  
+  font-size: 1.3rem;
+  color: #000;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+
+.faq-answer {
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .faq-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+
+.book-now-section {
+  background-color: #fef4f0;
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.book-now-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.book-now-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.book-now-left h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: #0f0f0f;
+}
+
+.book-now-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.book-now-button {
+  display: inline-block;
+  background-color: #744d3c;
+  color: white;
+  
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.book-now-button:hover {
+  background-color: #5e3e30;
+}
+
+.book-now-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.book-now-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 2rem;
+}
+
+/* ✅ Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .book-now-left h2 {
+    font-size: 2rem;
+  }
+
+  .book-now-left p {
+    font-size: 1rem;
+  }
+
+  .book-now-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-now-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-now-left, .book-now-right {
+    width: 100%;
+  }
+
+  .book-now-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .book-now-left p {
+    font-size: 1rem;
+  }
+
+  .book-now-img {
+    max-width: 300px;
+  }
+}
+
+
+
+.services-section {
+  display: flex;
+  background-color: #fef4f0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+
+  /* ✅ Responsive side padding */
+  padding: 3rem clamp(1rem, 5vw, 10rem);
+
+  max-width: 1700px;
+  margin: 0 auto;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+
+.services-content {
+  flex: 1;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+.service-box {
+  border: 1px solid #f3c4b6;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.service-box:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.service-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.grid-placeholder {
+  flex: 1;
+  min-width: 320px;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ✅ Responsive Layout */
+@media (max-width: 768px) {
+  .services-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .grid-placeholder {
+    margin-top: 2rem;
   }
 }
