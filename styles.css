@@ -17,7 +17,7 @@ body {
 
 main {
   padding-inline: 1rem;
-  max-width: 1700px;
+  max-width: 85vw;
   margin: 0 auto;
 }
 
@@ -603,11 +603,13 @@ nav a {
 
   max-width: 1700px;
   margin: 0 auto;
-  align-items: stretch;
+  align-items: center;
   box-sizing: border-box;
 }
 
-
+.services-content h2{
+  margin: 20px;
+}
 .services-content {
   flex: 1;
   min-width: 320px;
@@ -646,8 +648,9 @@ nav a {
 }
 
 .grid-placeholder {
-  flex: 1;
-  min-width: 320px;
+  /* flex: 1; */
+  min-width: 45%;
+  height: 80%;
   background-color: #d4d4d4;
   border-radius: 12px;
   padding: 2rem;
