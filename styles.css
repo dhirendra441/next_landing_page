@@ -142,7 +142,8 @@ nav a {
 .maid-img {
   position: absolute;
   bottom: 0;
-  left: 20%;
+  left: 55%;
+  bottom: -6%;
   width: 20%;
   height: auto;
   z-index: 2; /* Stays above chat image and glow */
@@ -214,7 +215,8 @@ nav a {
 
   .maid-img {
     width: 20%;
-    left: 20%;
+    left: 55%;
+     bottom: -6%;
   }
 }
 
@@ -228,6 +230,16 @@ nav a {
   text-align: center;
 }
 
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+
 .features-container {
   display: flex;
   justify-content: space-between;
@@ -238,7 +250,7 @@ nav a {
 
 .feature-card {
   background-color: #fef3ec;
-  border: 0.15rem solid #7a4b40;
+  border: 0.15rem solid #7a4b4021;
   border-radius: 1rem;
   flex: 1 1 20rem;
   max-width: 22rem;
@@ -256,7 +268,7 @@ nav a {
 
 .feature-card h3 {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
@@ -632,6 +644,7 @@ nav a {
 .service-box h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
+  font-weight: 400;
   color: #333;
 }
 
