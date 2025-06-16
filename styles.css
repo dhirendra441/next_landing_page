@@ -63,7 +63,12 @@ html {
     transform: translateY(0px);
   }
 }
-
+.service-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+}
 .animate-on-scroll-top {
   opacity: 0;
   transform: translateX(-40px);
@@ -320,7 +325,7 @@ a{
 
 .features-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 4rem;
@@ -329,7 +334,7 @@ a{
 .feature-card {
   background-color: #fef3ec;
   border-radius: 1rem;
-  width: 15rem;
+  width: 20rem;
   padding: 2rem 1.5rem;
   text-align: center;
 }
@@ -680,29 +685,7 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
-  .book-now-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 
-  .book-now-left, .book-now-right {
-    width: 100%;
-  }
-
-  .book-now-left h2 {
-    font-size: 1.8rem;
-  }
-
-  .book-now-left p {
-    font-size: 1rem;
-  }
-
-  .book-now-img {
-    max-width: 300px;
-  }
-}
 
 
 
@@ -725,6 +708,7 @@ h2 {
 .services-content h2{
   margin: 20px;
   padding: 0rem;
+
 }
 .services-content {
   flex: 1;
@@ -745,12 +729,7 @@ h2 {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.service-box h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #333;
-}
+
 
 .service-box p {
   margin: 0;
@@ -845,3 +824,76 @@ h2 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+  .book-now-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-now-left, .book-now-right {
+    width: 100%;
+  }
+  .service-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .service-box{
+    width: 45%;
+    height: 16.5rem;
+  }
+  .book-now-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .book-now-left p {
+    font-size: 1rem;
+  }
+
+  .book-now-img {
+    max-width: 300px;
+  }
+  .services-content h2{
+    font-size: 1.5rem;
+  }
+  .service-box h3 {
+    text-align: center;
+    font-size: 1rem;
+    text-align: cen;
+  }
+  .service-box p {
+    text-align: center;
+    font-size: 0.8rem;
+    text-align: cen;
+  }
+  .line{
+    height: 2px;
+    width: 80%;
+    background-color: rgb(243, 213, 182);
+    margin: 0 auto;
+    margin-bottom: 0.4rem;
+  }
+  .feature-container-last{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-item {
+    height: 15rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .feature-item h4 {
+    font-size: 1rem;
+  } 
+  .feature-item p {
+    font-size: 0.8rem;
+  }
+}
