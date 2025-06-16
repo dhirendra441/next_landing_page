@@ -222,6 +222,10 @@ nav a {
 
 /* Responsive Navbar & Layout */
 @media (max-width: 768px) {
+  main {
+    padding-inline: 0rem;
+    width: 95vw;
+  }
   html {
     font-size: 16px;
   }
@@ -257,7 +261,6 @@ nav a {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-
   .main-heading {
     font-size: 2.5rem;
     /* Smaller for mobile */
@@ -273,6 +276,7 @@ nav a {
   }
 
   .hero-right {
+    display: none;
     max-width: 100%;
     margin-left: 0;
     margin-top: 2rem;
@@ -300,7 +304,7 @@ a{
   background-color: #fef4f000;
   margin-top: 100px;
   margin-bottom: -90px;
-  padding: 4rem 3rem;
+  padding: 4rem 0.5rem;
   text-align: center;
 }
 
@@ -325,8 +329,7 @@ a{
 .feature-card {
   background-color: #fef3ec;
   border-radius: 1rem;
-  flex: 1 1 20rem;
-  max-width: 18rem;
+  width: 15rem;
   padding: 2rem 1.5rem;
   text-align: center;
 }
@@ -374,12 +377,14 @@ a{
 /* Responsive */
 @media (max-width: 768px) {
   .features-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .feature-card {
-    max-width: 100%;
+    max-width: 45%;
+    padding: 1rem;
   }
 
   .feature-card h3 {
@@ -501,7 +506,9 @@ h2 {
     align-items: center;
   }
 
-  .chat-phone,
+  .chat-phone{
+    display: none;
+  }
   .whatsapp-features {
     max-width: 100%;
   }
@@ -520,6 +527,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .feature-card h3{
+    font-size: 1rem;
+  }
+  .feature-card p{
+    font-size: 0.7rem;
   }
 }
 
@@ -711,6 +724,7 @@ h2 {
 
 .services-content h2{
   margin: 20px;
+  padding: 0rem;
 }
 .services-content {
   flex: 1;
