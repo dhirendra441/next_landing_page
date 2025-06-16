@@ -178,6 +178,18 @@ nav a {
   transition: background-color 0.3s;
 }
 
+.login-btn {
+  background-color: #5c5c5c00;
+  color: #6b3b28;
+  font-size: 1rem;
+  padding: 0.85rem 2.2rem;
+  border:none;
+  border-radius: 2rem;
+  cursor: pointer;
+  
+  transition: background-color 0.3s;
+}
+
 .book-btn:hover {
   background-color: #5a3020;
 }
@@ -299,7 +311,26 @@ nav a {
   }
 }
 
-a{
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+.material-symbols-outlined {
+  font-size: 32px;
+  color: white;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-icon {
+  background-color: #f99e97;
+  border-radius: 50%;
+}a{
   text-decoration: none;
   color: inherit;
 }
@@ -339,13 +370,6 @@ a{
   text-align: center;
 }
 
-.feature-icon {
-  background-color: #f99e97;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  margin: 0 auto 1.5rem auto;
-}
 
 .feature-card h3 {
   font-size: 1.4rem;
@@ -896,4 +920,91 @@ h2 {
   .feature-item p {
     font-size: 0.8rem;
   }
+}
+
+
+
+.footer {
+  background-color: #c3a1a1;
+  padding: 60px 40px 20px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 40px;
+}
+
+.footer-column1 {
+  flex: 1;
+  margin-top: 77px;
+  min-width: 200px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.footer-column ul li:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.footer-bottom i {
+  margin-right: 5px;
 }
