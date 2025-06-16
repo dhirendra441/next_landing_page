@@ -11,13 +11,13 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f3e9df;
+  background-color: rgb(255, 255, 255);
   color: #1a1a1a;
 }
 
 main {
   padding-inline: 1rem;
-  max-width: 1700px;
+  max-width: 85vw;
   margin: 0 auto;
 }
 
@@ -65,7 +65,7 @@ nav a {
   flex-wrap: wrap;
 
   /* ✅ Add subtle shadow below */
-  box-shadow: 0 60px 20px rgba(255, 228, 217, 0.6);
+  box-shadow: 0 60px 40px rgba(255, 228, 217, 1);
 }
 .hero-left {
   max-width: 50%;
@@ -110,7 +110,7 @@ nav a {
 /* Hero Right */
 .hero-right {
   position: relative;
-  max-width: 45%;
+  max-width: 50%;
   margin-left: -4rem;
 }
 
@@ -122,7 +122,7 @@ nav a {
   left: 10%;
   width: 80%;
   height: 80%;
-  background: radial-gradient(circle, rgba(154, 122, 188, 0.988) 4%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 149, 149, 0.988) 4%, transparent 70%);
   border-radius: 90%;
   filter: blur(20px);
   z-index: 0;
@@ -608,11 +608,13 @@ nav a {
 
   max-width: 1700px;
   margin: 0 auto;
-  align-items: stretch;
+  align-items: center;
   box-sizing: border-box;
 }
 
-
+.services-content h2{
+  margin: 20px;
+}
 .services-content {
   flex: 1;
   min-width: 320px;
@@ -652,8 +654,9 @@ nav a {
 }
 
 .grid-placeholder {
-  flex: 1;
-  min-width: 320px;
+  /* flex: 1; */
+  min-width: 45%;
+  height: 80%;
   background-color: #d4d4d4;
   border-radius: 12px;
   padding: 2rem;
