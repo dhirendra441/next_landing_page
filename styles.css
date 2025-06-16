@@ -258,13 +258,6 @@ nav a {
   text-align: center;
 }
 
-.feature-icon {
-  background-color: #f99e97;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  margin: 0 auto 1.5rem auto;
-}
 
 .feature-card h3 {
   font-size: 1.4rem;
