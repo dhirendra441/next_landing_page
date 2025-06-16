@@ -232,7 +232,26 @@ nav a {
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
+.material-symbols-outlined {
+  font-size: 32px;
+  color: white;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-icon {
+  background-color: #f99e97;
+  border-radius: 50%;
+}
 
 
 .features-section {
@@ -695,6 +714,8 @@ nav a {
 }
 
 
+
+
 .footer {
   background-color: #c3a1a1;
   padding: 60px 40px 20px;
@@ -715,6 +736,13 @@ nav a {
 
 .footer-column {
   flex: 1;
+  min-width: 200px;
+  margin-bottom: 40px;
+}
+
+.footer-column1 {
+  flex: 1;
+  margin-top: 77px;
   min-width: 200px;
   margin-bottom: 40px;
 }
