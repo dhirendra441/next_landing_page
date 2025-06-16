@@ -351,8 +351,7 @@ a{
 }
 
 .grid-placeholder {
-  background-color: #d4d4d4;
-  padding: 2rem;
+  padding: 0.5rem;
   border-radius: 1rem;
   width: 25rem;
   aspect-ratio: 1 / 1;
@@ -360,7 +359,7 @@ a{
   margin-left: auto;
   margin-right: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
 }
@@ -422,7 +421,8 @@ a{
 .chat-phone {
   flex: 1;
   aspect-ratio: 1 / 1;
-  background-color: #d4d4d4;
+  /* background-color: #d4d4d4; */
+  /* background: url('./WhatsApp_Service.png'); */
   border-radius: 2rem;
   display: flex;
   align-items: center;
@@ -431,8 +431,23 @@ a{
   min-width: 280px;
   max-width: 400px;
   text-align: center;
+  /* object-fit: cover; */
 }
-
+.service-grid-img{
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.phone-screen {
+  /* width: 90%; */
+  height: 100%;
+  object-fit: fill;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+  /* Ensures the image covers the box */
+}
 /* Right content: match height by using flex */
 .whatsapp-features {
   flex: 1;
@@ -574,6 +589,7 @@ h2 {
   font-family: 'Inter', sans-serif;
   position: relative;
   z-index: 1;
+      border-radius: 35px;
 }
 
 .book-now-container {
@@ -738,17 +754,14 @@ h2 {
   /* flex: 1; */
   min-width: 45%;
   height: 80%;
-  background-color: #d4d4d4;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   font-size: 1rem;
-  color: #444;
 }
 
 /* ✅ Responsive Layout */
